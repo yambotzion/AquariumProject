@@ -28,8 +28,8 @@ public class AquaFish
     // STATE
 
     // Named constants that specify how far a fish may move in one timestep
-    public static final int MIN_DISTANCE = 10;
-    public static final int MAX_DISTANCE = 70;
+    public static final int MIN_DISTANCE = 40;
+    public static final int MAX_DISTANCE = 200;
 
     // Class Variables: Shared among ALL fish
     private static int nextAvailableID = 1;   // next avail unique identifier

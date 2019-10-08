@@ -26,13 +26,23 @@ public class AquaSimApplication
         System.out.println("This will be an aquarium simulation.");
 
         // CONSTRUCT OBJECTS NEEDED FOR THE AQUARIUM SIMULATION.
-
+     
         // Construct the aquarium.  Specify its dimensions when creating it.
         Aquarium aqua;                 // create reference to an Aquarium ...
-        aqua = new Aquarium(600, 480); // ... object that has now been created
+        aqua = new Aquarium(600, 480);
+   
+        // ... object that has now been created
 
         // Construct fish and add them to the aquarium.
-        //      CODE MISSING HERE!
+        AquaFish teemo = new AquaFish(aqua, Color.RED);
+        AquaFish omegeo = new AquaFish(aqua, Color.BLUE);
+        AquaFish beemo = new AquaFish(aqua, Color.BLUE);
+        
+        aqua.add(teemo);
+        aqua.add(omegeo);
+        aqua.add(beemo);
+        
+        
 
         // Construct a graphical user interface (GUI) to display and control
         // the simulation.  The user interface needs to know about the
@@ -53,13 +63,44 @@ public class AquaSimApplication
         // RUN THE AQUARIUM SIMULATION.
 
         // Make the fish move and redisplay.
-        //      CODE MISSING HERE!
-
-
+        
+        for(;;){
+        teemo.moveForward(); 
+        beemo.moveForward(); 
+        omegeo.moveForward(); 
+       
+            if(teemo.atWall()){
+         teemo.changeDir();
+         
+         
+        }
+        if(beemo.atWall()){
+         beemo.changeDir();
+        
+        
+        }
+        if(omegeo.atWall()){
+         omegeo.changeDir();
+         
+         
+        }
+        
+        
+       
+        
+        userInterface.showAquarium();
+        
+        
+    }
+        
+        
+        
+        
+        
+       
         // WRAP UP.
-
         // Remind user how to quit application.
-        userInterface.println ("Close GUI display window to quit.");
+        
 
     }//end main
 
