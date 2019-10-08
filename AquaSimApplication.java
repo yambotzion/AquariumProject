@@ -26,7 +26,10 @@ public class AquaSimApplication
         System.out.println("This will be an aquarium simulation.");
 
         // CONSTRUCT OBJECTS NEEDED FOR THE AQUARIUM SIMULATION.
-     
+        Random generator = new Random();
+        int randInt = generator.nextInt(10);
+            randInt = generator.nextInt(10);
+               
         // Construct the aquarium.  Specify its dimensions when creating it.
         Aquarium aqua;                 // create reference to an Aquarium ...
         aqua = new Aquarium(600, 480);
